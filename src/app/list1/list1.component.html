@@ -1,0 +1,16 @@
+
+<div>
+    page 1
+</div>
+
+<ul>
+    <li *ngFor="let item of itemList" [class.selected]="item.id === selectedPhrase" (click)="selectPhrase(item)">
+      id: {{item.id}} - {{item.value}} - {{item.language}}
+    </li>
+  </ul>
+
+
+  <hr>
+
+
+  <router-outlet></router-outlet>
